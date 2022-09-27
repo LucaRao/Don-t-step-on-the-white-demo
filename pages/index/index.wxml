@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="line">
+    <view class="blocks black" id="get_started" bindtap="goGame">
+      <text>手残模式</text>
+    </view>
+    <view class="blocks" id="classic" bindtap="goGame">
+      <text>经典模式</text>
+    </view>
+  </view>
+  <view class="line">
+    <view class="blocks" id="extreme_speed" bindtap="goGame">
+      <text>急速模式</text>
+    </view>
+    <view class="blocks black" >
+    </view>
+    <!-- todo:登录注册模块 -->
+
+  </view>
+  <view class="line">
+<!-- todo:个人最好成绩和全国排名模块 -->
+  </view>
+</view> 
+
+    <!--mask-->
+    <view class="drawer_screen" wx:if="{{showModalStatus}}"></view>
+    <!--content-->
+    <!--使用animation属性指定需要执行的动画-->
+    <view class="drawer_box" wx:if="{{showModalStatus}}">
+      <!--drawer content-->
+      <view class="drawer_title">{{maskTitle}}</view>
+      <view class="drawer_content">
+        <input class='tel-input' type='text' placeholder='请输入邮箱' maxlength="50" bindinput="getUserName"></input>
+        <!-- <view class="form_group"> -->
+          <input type="password" class="tel-input" placeholder="请输入密码" placeholder-class="placeholder_style" bindinput='getPassword' />
+        <!-- </view> -->
+      </view>
+        
+      <view class="btn_ok" bindtap="reviseTap">确定</view>
+      <view class="btn_ok" bindtap="close">取消</view>
+    </view>
+    
