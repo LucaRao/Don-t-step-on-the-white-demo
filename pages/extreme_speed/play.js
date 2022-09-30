@@ -95,8 +95,8 @@ Page({
     onLoad: function (options) {
       var that = this;
       that.setData({
-        email: options.email ? options.email : null
-      })
+      email: wx.getStorageSync('userInfo').email ? wx.getStorageSync('userInfo').email : null
+    })
       wx.setNavigationBarTitle({
         title: that.data.typeName
       });
