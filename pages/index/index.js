@@ -100,7 +100,7 @@ Page({
 
     var gameType = event.target.id;
     wx.navigateTo({
-      url: '../'+gameType+'/play?email='+this.data.userInfo.email
+      url: '../'+gameType+'/play'
     })
   },
   close:function (){
